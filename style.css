@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+*{
+     font-family: 'Source Sans Pro', sans-serif;
+     margin: 0;
+     padding: 0;
+}
+
+body{
+     background: linear-gradient(145deg, #ffffff, #d6d6d6);
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.p-card{
+     background: #393e46;
+     position: relative;
+     width: 390px;
+     height: 600px;
+     border-radius: 50px;
+     overflow: hidden;
+     box-shadow:  10px 10px 40px #b4b4b4,
+             -10px -10px 20px #ffffff;
+     transition: 0.4s;
+}
+
+/* ===========BUY NOW TEXT=========== */
+.p-card .buy-now{
+     position: absolute;
+     background: #00adb5;
+     height: 50%;
+     width: 100%;
+     top: 0%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50px;
+     transition: 0.4s cubic-bezier(1, 0, 0, 1);
+}
+
+.p-card .buy-now h2{
+     font-size: 3.4em;
+     font-weight: 100;
+}
+
+.p-card:hover .buy-now{
+     top: -45%;
+}
+
+/* ===========IMG============ */
+.p-card .p-image{
+     position: relative;
+     top: 35%;
+     left: 15%;
+     z-index: 10;
+     transition: 0.4s cubic-bezier(1,0,0,1);
+}
+
+.p-card .p-image img{
+     width: 70%;
+     transition: 0.4s cubic-bezier(1, 0, 0, 1);
+}
+
+.p-card:hover .p-image{
+     top: 15%;
+     left: 25%;
+}
+
+.p-card:hover .p-image img{
+     width: 50%;
+}
+
+/* ===========SHAPE============ */
+.p-card .shape {
+     position: absolute;
+     background: linear-gradient(20deg, #aad8d3 0%, #00adb5 100%);
+     animation: shape 6s cubic-bezier(1, 0, 0.5, 1) infinite;
+     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+     height: 270px;
+     width: 270px;
+     top: 100%;
+     left: 15%;
+     transition: all 0.4s cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes shape {
+     0% {border-radius:  60% 40% 50% 70% / 60% 60% 70% 40%;}
+     20% {border-radius:  50% 60% 70% 40% / 50% 60% 40% 60%;}
+     40% {border-radius:  50% 60% 40% 70% / 40% 50% 40% 60%;}
+     60% {border-radius:  60% 40% 70% 70% / 70% 50% 50% 60%;}
+     80% {border-radius:  50% 50% 80% 40% / 40% 70% 40% 60%;}
+     100% {border-radius:  60% 40% 50% 70% / 60% 60% 70% 40%;}
+}
+
+.p-card:hover .shape{
+     top: 10%;
+}
+
+/* ===========CONTENT============ */
+.p-card .p-content{
+     position: relative;
+     background: #00adb5;
+     top: 42%;
+     height: 40%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     border-radius: 50px;
+     z-index: 1;
+     transition: 0.4s cubic-bezier(1, 0, 0, 1);
+}
+.p-card:hover .p-content{
+     top: 22%;
+     height: 41%;
+}
+.p-card .p-content .p-name{
+     font-size: 2.2em;
+     font-weight: 300;
+     color: #393e46;
+}
+.p-card .p-content .p-name span{
+     font-weight: 900;
+}
+.p-card .p-content .p-price{
+     color: #393e46;
+     font-size: 1.4em;
+     font-weight: 300;
+}
+.p-card .p-content .p-price span{
+     font-size: 1.8em;
+     font-weight: 900;
+}
+.p-card .p-content a{
+     text-decoration: none;
+     color: #00adb5;
+     font-size: 1.4em;
+     text-transform: capitalize;
+     background: #393e46;
+     padding: 10px 15px;
+     margin-top: 20px;
+     border-radius: 10px;
+}
+.p-card .p-content a:hover{
+     background: linear-gradient(145deg, #33383f, #3d424b);
+     box-shadow:  5px 5px 16px #00939a,
+             -5px -5px 16px #00c7d0;
+}
